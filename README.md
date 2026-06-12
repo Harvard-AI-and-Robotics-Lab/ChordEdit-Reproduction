@@ -11,6 +11,17 @@
   <img src="chord_show.gif" alt="ChordEdit demo" width="100%" />
 </div>
 
+## 0. Reproduced ChordEdit Results
+This averages the 700 PIE-Bench samples in PIE-Bench.
+
+| Method | Structure Dist. ↓ | PSNR ↑ | LPIPS ↓ | MSE ↓ | SSIM ↑ | CLIP Src. ↑ | CLIP Tgt. ↑ | CLIP Edit ↑ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ChordEdit (Naive, paper)   |0.02544 | 21.38  | 0.1313 | 0.00973 | 0.7439 |  -      | 25.11   | 21.96.  |
+| ChordEdit (Naive, Reprod.) |0.0457 | 20.14 | 0.1559 | 0.0133  | 0.7327 | 25.4281 | 25.1151 | 22.5767 |
+| ChordEdit (Paper)   | 0.01658      | 22.20   | 0.12825 | 0.00684   | 0.7591      | - | 25.58   | 22.96 |
+| ChordEdit (Reprod.)    | 0.0295 | 22.64   | 0.1185  | 0.0080 | 0.7675 | 25.4281 | 24.8226 | 22.1554 |
+
+
 ## 1. Environment
 - Python 3.12
 - PyTorch 2.5.0
@@ -59,6 +70,7 @@ pie_bench
 
 For PIE-Bench data preparation and protocol details, please refer to:
 https://github.com/cure-lab/PnPInversion
+
 
 # Citation
 If you find our work helpful, please **star 🌟** this repo and **cite 📑** our paper. Thanks for your support!
